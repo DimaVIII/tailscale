@@ -1,3 +1,5 @@
+#!/bin/bash
+
 curl -sL https://raw.githubusercontent.com/DimaVIII/CentOS-repo/main/install.sh | sh
 
 yum install yum-utils -y
