@@ -19,6 +19,8 @@ sysctl -p /etc/sysctl.conf
 firewall-cmd --permanent --add-masquerade
 firewall-cmd --reload
 
+# UP Tailscale
+tailscale up
 
 # Set network
 tailscale set --advertise-routes=192.0.10.0/24
@@ -27,6 +29,3 @@ tailscale set --exit-node-allow-lan-access
 
 # Enable Exit node
 tailscale set --advertise-exit-node
-
-
-tailscale up
