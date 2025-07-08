@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Install
 curl -sL https://raw.githubusercontent.com/DimaVIII/CentOS-repo/main/install.sh | sh
 
 yum install yum-utils -y
@@ -23,9 +24,9 @@ firewall-cmd --reload
 tailscale up
 
 # Set network
+tailscale set --accept-routes
 tailscale set --advertise-routes=192.0.10.0/24
 tailscale set --exit-node-allow-lan-access
-
 
 # Enable Exit node
 tailscale set --advertise-exit-node
